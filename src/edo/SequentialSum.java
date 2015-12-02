@@ -33,12 +33,19 @@ public class SequentialSum{
         BigInteger result;
 
         if( multiplicand.equals( BigInteger.ZERO ) ){
+
             return BigInteger.ZERO;
+
         }else if( multiplicand.equals( BigInteger.ONE ) ){
+
             result = multiplier;
+
         }else{
+
             result = multiplier.add( recursiveMultiply( multiplier, multiplicand.subtract( BigInteger.ONE ) ) );
+
         }
+
         return result;
 
     }

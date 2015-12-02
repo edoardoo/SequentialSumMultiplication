@@ -17,49 +17,49 @@ public class SequentialSumTest{
     @Test
     public void testMultiplyNormalCondition() throws Exception{
 
-        Assert.assertEquals( BigInteger.valueOf( 30 ), SequentialSum.multiply(  10, 3 ) );
+        Assert.assertEquals( BigInteger.valueOf( 30 ), SequentialSum.multiply( 10, 3 ) );
 
     }
 
     @Test
     public void testMultiplyNegativeMultiplier() throws Exception{
 
-        Assert.assertEquals( BigInteger.valueOf( -30 ), SequentialSum.multiply(  -10, 3 ) );
+        Assert.assertEquals( BigInteger.valueOf( -30 ), SequentialSum.multiply( -10, 3 ) );
 
     }
 
     @Test
     public void testMultiplyNegativeMultiplicand() throws Exception{
 
-        Assert.assertEquals( BigInteger.valueOf( -30 ), SequentialSum.multiply(  10, -3 ) );
+        Assert.assertEquals( BigInteger.valueOf( -30 ), SequentialSum.multiply( 10, -3 ) );
 
     }
 
     @Test
     public void testMultiplyNegativeMembers() throws Exception{
 
-        Assert.assertEquals( BigInteger.valueOf( 30 ), SequentialSum.multiply(  -10, -3 ) );
+        Assert.assertEquals( BigInteger.valueOf( 30 ), SequentialSum.multiply( -10, -3 ) );
 
     }
 
     @Test
     public void testMultiplyZeroMultiplicand() throws Exception{
 
-        Assert.assertEquals( BigInteger.valueOf( 0 ), SequentialSum.multiply(  3, 0 ) );
+        Assert.assertEquals( BigInteger.valueOf( 0 ), SequentialSum.multiply( 3, 0 ) );
 
     }
 
     @Test
     public void testMultiplyZeroMultiplier() throws Exception{
 
-        Assert.assertEquals( BigInteger.valueOf( 0 ), SequentialSum.multiply(  0, 3 ) );
+        Assert.assertEquals( BigInteger.valueOf( 0 ), SequentialSum.multiply( 0, 3 ) );
 
     }
 
     @Test
     public void testMultiplyZeroMembers() throws Exception{
 
-        Assert.assertEquals( BigInteger.valueOf( 0 ), SequentialSum.multiply(  3, 0 ) );
+        Assert.assertEquals( BigInteger.valueOf( 0 ), SequentialSum.multiply( 3, 0 ) );
 
     }
 
@@ -69,7 +69,5 @@ public class SequentialSumTest{
         Assert.assertEquals( new BigInteger( "6442450941" ), SequentialSum.multiply( Integer.MAX_VALUE, 3 ) );
 
     }
-
-
 
 }
