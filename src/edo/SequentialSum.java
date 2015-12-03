@@ -8,41 +8,41 @@ import java.math.BigInteger;
  * Repository contains JUNIT tests.
  *
  * @author Edoardo Odorico
- *
+ * @author David Bohmann
  */
 public class SequentialSum{
 
     private SequentialSum(){
     }
 
-    public static BigInteger multiply(BigInteger multiplier, BigInteger multiplicand){
+    public static BigInteger multiply( BigInteger multiplicand, BigInteger multiplier ){
 
-        BigInteger result = recursiveMultiply( multiplier, multiplicand.abs() );
-        return result.multiply( BigInteger.valueOf( multiplicand.signum() ) );
-
-    }
-
-    public static BigInteger multiply( int multiplier, int multiplicand ){
-
-        return multiply( BigInteger.valueOf( multiplier ), BigInteger.valueOf( multiplicand ) );
+        BigInteger result = recursiveMultiply( multiplicand, multiplier.abs() );
+        return result.multiply( BigInteger.valueOf( multiplier.signum() ) );
 
     }
 
-    private static BigInteger recursiveMultiply( BigInteger multiplier, BigInteger multiplicand ){
+    public static BigInteger multiply( int multiplicand, int multiplier ){
+
+        return multiply( BigInteger.valueOf( multiplicand ), BigInteger.valueOf( multiplier ) );
+
+    }
+
+    private static BigInteger recursiveMultiply( BigInteger multiplicand, BigInteger multiplier ){
 
         BigInteger result;
 
-        if( multiplicand.equals( BigInteger.ZERO ) ){
+        if( multiplier.equals( BigInteger.ZERO ) ){
 
             return BigInteger.ZERO;
 
-        }else if( multiplicand.equals( BigInteger.ONE ) ){
+        }else if( multiplier.equals( BigInteger.ONE ) ){
 
-            result = multiplier;
+            result = multiplicand;
 
         }else{
 
-            result = multiplier.add( recursiveMultiply( multiplier, multiplicand.subtract( BigInteger.ONE ) ) );
+            result = multiplicand.add( recursiveMultiply( multiplicand, multiplier.subtract( BigInteger.ONE ) ) );
 
         }
 
